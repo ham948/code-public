@@ -1,0 +1,38 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/home/djh/code/**",
+                "/usr/lib/avr/include/"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc:/usr/lib/avr/include",
+            "cStandard": "c17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerPathInCppPropertiesJson": "/usr/bin/gcc:/usr/lib/avr/include",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "/home/hamo94/code/**",
+                    "/usr/lib/avr/include",
+                    "/home/hamo94/code"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        },
+        {
+            "name": "avr",
+            "includePath": [
+                "/usr/lib/avr/include/"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/avr-gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
