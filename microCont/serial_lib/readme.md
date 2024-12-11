@@ -1,0 +1,1 @@
+library for the serial peripheral of Atmega 328p (arduino), ocasional this library is updated for things like conditioning a int into ASCII string, vice versa. soon a means for receving mulitple lines of data (delimiated by \r or \n) and storing it into a 2D array, this will include use of interrupts instead of polling.

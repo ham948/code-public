@@ -1,0 +1,6 @@
+Library for use with SSD1306 OLED displays both 128X32 and 128X64, this library was wrote from scratch using the SSD1306 datasheet, efforts were made to keep it as simple and small as possible. it includes features for printing strings of charaters either 8x8 pixels or 12x16 pixels. also basic graphics such as line and rectangle drawing, if lines ovlap with characters they will invert the pixels, there is also a flag to have the characters printed inverted that is with the background light and the characters dark, which is usful for printing menus and the cursor postition, to minimize flickering of the LCD there is a array of 128X8 bytes (representing 128X64 bits, or one bit per pixel) this array is is compared for changes before each update of the screen, this means pixels will only be turned on or off each time they are changed, instead of the defualt of writing to each pixel each refresh cycle.
+
+If still faster refresh rates are required, the frequency of the IC2 driver (also wrote from scratch) can be increased to the 400KHZ of a Atmega 328p (arduino) chip's I2C line, but this is only advised for use on PCBs as this high frequency can be intermittent when used on breadboards.
+
+
+The I2C library used here was programmed from scratch.
