@@ -206,5 +206,5 @@ ISR(USART_RX_vect){
     usart_recieveStr(fromSIMstr);
     //procLine();
     //sei();
-    //hello
+    //hello earth
 }
