@@ -17,9 +17,10 @@ int main(void){
     lcd_setCursor(0,2);
     lcd_printStr("!!!WAKE UP",'t');
     lcd_setCursor(0,5);
-    lcd_printStr(" 08:15:31 ",'t');
-
-    lcd_write_cmd(SCROLL_ON);
+    lcd_invertPrint(1);
+    lcd_printStr("hello",'t');
+    lcd_invertPrint(0);
+    //lcd_write_cmd(SCROLL_ON);
     lcd_setCursor(0,0);
 
 }

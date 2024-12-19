@@ -25,6 +25,13 @@ unsigned char i2c_read(unsigned char ackVal){
   while(!(TWCR & (1<<TWINT)));
   return TWDR;
 }
+void i2c_write_byte(unsigned char data,unsigned char mem_adrs,unsigned char dev_adrs){
+  i2c_start();
+  i2c_write(dev_adrs<<1);
+  i2c_write(mem_adrs);
+  i2c_write(data);
+  i2c_stop();
+}
 
 void i2c_writeMulti(unsigned char bytes[],unsigned char no_b, char mem_adrs, unsigned char dev_adrs){
   i2c_start();
@@ -53,6 +60,6 @@ void i2c_readMulti(unsigned char *bytes[],unsigned char no_b, char mem_adrs, uns
 
 void i2c_init(void){
   TWSR = 0X00;  // i2c clock (scl) prescaler set to 0 (4^prescaler = 0) 
-  TWBR = 152;   // scl freq. to 50k for 16MHz mcu
+  TWBR = 36;   // scl freq. to 50k for 16MHz mcu default 152, 12 for 400khz
   TWCR = 0X04;  // enable TWI mode
 }

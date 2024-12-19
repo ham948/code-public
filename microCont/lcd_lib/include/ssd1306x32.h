@@ -20,13 +20,17 @@
     void lcd_init(void);
     void lcd_write_cmd(unsigned char cmd);
     void lcd_write_data(unsigned char data);
+    void lcd_write_data_overlap(unsigned char data);
     void lcd_clear_data(void);
+    void lcd_invertPrint(unsigned char i);
     void lcd_setCursor(unsigned char x, unsigned char y);
     void lcd_movCursor(unsigned char x, unsigned char y);
     void lcd_clearFullDisplay(void);
     void lcd_print12x16(unsigned char c,unsigned char f);
     void lcd_print8x8(unsigned char c);
     void lcd_printStr(char s[],unsigned char f);
+    void lcd_printInt(int n,unsigned char f);
+    void reverse_i2c(char s[]);
     void lcd_line(unsigned char x1,unsigned char y1,unsigned char x2,unsigned char y2);
     void lcd_square(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2);
 

@@ -4,6 +4,7 @@
 void i2c_stop();
 void i2c_start(void);
 void i2c_write(unsigned char data);
+void i2c_write_byte(unsigned char data,unsigned char mem_adrs,unsigned char dev_adrs);
 unsigned char i2c_read(unsigned char ackVal);
 void i2c_writeMulti(unsigned char bytes[],unsigned char no_b, char mem_adrs, unsigned char dev_adrs);
 void i2c_readMulti(unsigned char *bytes[],unsigned char no_b, char mem_adrs, unsigned char dev_adrs);
