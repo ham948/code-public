@@ -10,7 +10,7 @@ int main(void){
 	unsigned char year, month, day, hour, min, sec;
 
 	rtc_init();
-	//rtc_setTime(0x20,0x37,0x30);
+	rtc_setTime(0x12,0x37,0x30);
 	//rtc_setDate(0x24,0x11,0x17);
 	
 	usart_init();
